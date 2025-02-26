@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: '22'
 
+      - name: set up env variable
+        run: echo "NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY=${{ secrets.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY }}" >> $GITHUB_ENV
+          
       - name: install dependencies
         run: yarn install --immutable
 
