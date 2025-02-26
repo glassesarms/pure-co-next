@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: checkout repository
-        run: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: enable corepack
         run: corepack enable
