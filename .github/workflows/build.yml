@@ -1,0 +1,26 @@
+name: build pure-co storefront
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repository
+        run: actions/checkout@v4
+
+      - name: enable corepack
+        run: corepack enable
+
+      - name: use node js and yarn
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'yarn'
