@@ -26,3 +26,6 @@ jobs:
 
       - name: install dependencies
         run: yarn install --immutable
+
+      - name: build
+        run: yarn build
